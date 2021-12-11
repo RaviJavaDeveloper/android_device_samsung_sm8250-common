@@ -1,0 +1,23 @@
+type vendor_secril_config_svc, domain;
+type vendor_secril_config_svc_exec, exec_type, file_type, vendor_file_type;
+
+init_daemon_domain(vendor_secril_config_svc)
+
+# /mnt/vendor/
+allow vendor_secril_config_svc mnt_vendor_file:dir r_dir_perms;
+allow vendor_secril_config_svc mnt_vendor_file:file r_file_perms;
+
+# /mnt/vendor/efs/factory.prop
+# /mnt/vendor/efs/telephony.prop
+allow vendor_secril_config_svc efs_file:dir r_dir_perms;
+allow vendor_secril_config_svc efs_file:file r_file_perms;
+
+# ro.multisim.
+# ro.vendor.multisim.
+# ro.vendor.radio.default_network
+set_prop(vendor_secril_config_svc, vendor_radio_prop)
+
+allow vendor_secril_config_svc imei_efs_file:dir create_dir_perms;
+allow vendor_secril_config_svc imei_efs_file:file create_file_perms;
+allow vendor_secril_config_svc sec_poc_file:dir r_dir_perms;
+allow vendor_secril_config_svc sec_poc_file:file r_file_perms;
