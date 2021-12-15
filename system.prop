@@ -1,10 +1,10 @@
 # Samsung Specific Properties
-ro.build.PDA=SC52AOMS1BUJ1
-ro.build.sw_version=SC52AOMS1BUJ1
-ro.build.official.release=true
+ro.build.PDA=G781BXXS4CUI1
+ro.build.sw_version=G781BXXS4CUI1
+ro.build.official.release=false
 ro.build.2ndbrand=false
 ro.config.rm_preload_enabled=1
-ro.build.changelist=22431648
+ro.build.changelist=22378117
 ro.product_ship=true
 ro.user_trial=FALSE
 ro.hardware.chipname=SM8250
@@ -26,8 +26,8 @@ ro.crypto.dm_default_key.options_format.version=2
 
 
 # Perfetto
-iorapd.perfetto.enable=true
-iorapd.readahead.enable=true
-persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
-persist.device_config.runtime_native_boot.iorap_readahead_enable=true
-ro.iorapd.enable=true
+iorapd.perfetto.enable=false
+iorapd.readahead.enable=false
+persist.device_config.runtime_native_boot.iorap_perfetto_enable=false
+persist.device_config.runtime_native_boot.iorap_readahead_enable=false
+ro.iorapd.enable=false
