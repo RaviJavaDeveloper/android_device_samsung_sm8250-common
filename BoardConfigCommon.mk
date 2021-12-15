@@ -80,8 +80,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     vendor/aosp/config/device_framework_matrix.xml
 # specifies which HAL versions the vendor image provides
 DEVICE_MANIFEST_FILE += \
-    $(COMMON_PATH)/manifest.xml \
-    $(COMMON_PATH)/samsung_manifest.xml
+    $(COMMON_PATH)/manifest.xml
 # vendor compatibility matrix
 DEVICE_MATRIX_FILE += $(COMMON_PATH)/compatibility_matrix.xml
 
