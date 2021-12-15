@@ -23,3 +23,11 @@ ro.kernel.qemu=0
 net.bt.name=Android
 ro.vendor.qti.va_aosp.support=1
 ro.crypto.dm_default_key.options_format.version=2
+
+
+# Perfetto
+iorapd.perfetto.enable=true
+iorapd.readahead.enable=true
+persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
+persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+ro.iorapd.enable=true
