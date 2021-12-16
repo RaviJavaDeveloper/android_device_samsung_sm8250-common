@@ -548,8 +548,10 @@ PRODUCT_BOOT_JARS += framework-samsung
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
 
+# TODO
 # Sensors
 PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-service.multihal \
     android.hardware.sensors@2.1-service.samsung-multihal \
     libsensorndkbridge
 
