@@ -76,7 +76,6 @@ TARGET_SEC_FP_CALL_NOTIFY_ON_CANCEL := true
 # specifies framework requirements on conforming vendor implementations
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(COMMON_PATH)/device_framework_matrix.xml \
-    $(COMMON_PATH)/samsung_device_framework_matrix.xml \
     vendor/aosp/config/device_framework_matrix.xml
 # specifies which HAL versions the vendor image provides
 DEVICE_MANIFEST_FILE += \
@@ -185,7 +184,7 @@ BOARD_ROOT_EXTRA_FOLDERS := \
 BOARD_VENDOR := samsung
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2021-10-01
+VENDOR_SECURITY_PATCH := 2021-11-01
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk

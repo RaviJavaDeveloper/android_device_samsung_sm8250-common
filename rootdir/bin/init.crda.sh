@@ -1,6 +1,6 @@
 #! /vendor/bin/sh
 
-# Copyright (c) 2013, The Linux Foundation. All rights reserved.
+# Copyright (c) 2012, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -9,7 +9,7 @@
 #     * Redistributions in binary form must reproduce the above copyright
 #       notice, this list of conditions and the following disclaimer in the
 #       documentation and/or other materials provided with the distribution.
-#     * Neither the name of Linux Foundation nor
+#     * Neither the name of The Linux Foundation nor
 #       the names of its contributors may be used to endorse or promote
 #       products derived from this software without specific prior written
 #       permission.
@@ -27,13 +27,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-baseband=`getprop ro.baseband`
-if [ "$baseband" = "mdm" ] || [ "$baseband" = "mdm2" ]; then
-	start vendor.mdm_helper
-fi
-
-# This is for dummy modem. If so, to avoid mdm boot fail crash. 
-modem_bin='/vendor/firmware-modem/image'
-if [ ! -e "$modem_bin" ]; then
-	stop vendor.mdm_helper
+country=`getprop wlan.crda.country`
+# crda takes input in COUNTRY environment variable
+if [ $country != "" ]
+then
+COUNTRY="$country" /system/bin/crda
 fi

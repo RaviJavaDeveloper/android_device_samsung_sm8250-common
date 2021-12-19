@@ -160,27 +160,30 @@ PRODUCT_PACKAGES += \
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.class_main.sh \
+    init.crda.sh \
     init.mdm.sh \
     init.qcom.class_core.sh \
+    init.qcom.coex.sh \
     init.qcom.early_boot.sh \
+    init.qcom.efs.sync.sh \
+    init.qcom.factory.rc \
     init.qcom.post_boot.sh \
+    init.qcom.rc \
+    init.qcom.sdio.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qti.dcvs.sh \
-    init.qti.fm.sh \
-    init.nfc.samsung.rc \
-    init.qcom.rc \
-    init.qcom.factory.rc \
     init.qcom.usb.rc \
+    init.qcom.usb.sh \
+    init.qti.chg_policy.sh \
+    init.qti.dcvs.sh \
+    init.qti.qcv.sh \
+    init.r8q.rc \
     init.recovery.qcom.rc \
-    init.recovery.samsung.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
     init.samsung.eif.rc \
     init.samsung.rc \
     init.target.rc \
-    init.r8q.rc \
     ueventd.qcom.rc
 
 # Component overrides
@@ -626,6 +629,13 @@ PRODUCT_COPY_FILES += \
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
 PRODUCT_USE_PRODUCT_VNDK_OVERRIDE := true
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.allow.mock.location=1 \
+    ro.debuggable=1 \
+    persist.sys.usb.config=adb \
+    ro.adb.secure=0
 
 # WiFi
 PRODUCT_PACKAGES += \
