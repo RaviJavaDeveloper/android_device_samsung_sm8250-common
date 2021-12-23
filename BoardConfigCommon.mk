@@ -99,7 +99,7 @@ TARGET_KERNEL_SOURCE := kernel/samsung/sm8250
 
 # Kernel modules - WLAN
 TARGET_MODULE_ALIASES += \
-    wlan.ko:qca_cld3_wlan.ko
+    wlan.ko:cqa6390_wlan.ko
 
 # Bluetooth
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
