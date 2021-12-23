@@ -1181,7 +1181,6 @@ vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Qualcomm MSM Interface
 vendor/bin/qmi-framework-tests/qmi_test_mt_client_init_instance
-vendor/bin/irsc_util
 vendor/bin/pd-mapper
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
@@ -1253,6 +1252,7 @@ system/system_ext/lib64/vendor.qti.hardware.data.connection@1.0.so
 system/system_ext/lib64/vendor.qti.hardware.data.connection@1.1.so
 system/system_ext/lib64/vendor.qti.hardware.data.iwlan@1.0.so
 vendor/bin/hw/rild
+vendor/bin/irsc_util
 vendor/bin/adpl
 vendor/bin/ATFWD-daemon
 vendor/bin/ipacm-diag
@@ -1669,6 +1669,7 @@ vendor/etc/wlan_common_rc
 vendor/bin/iof_vendor
 vendor/etc/init/icd_over_five_vendor.rc
 vendor/bin/hw/sec.android.hardware.nfc@1.2-service
+vendor/etc/init/sec.android.hardware.nfc@1.2-service.rc
 vendor/lib64/nfc_nci_sec.so
 vendor/lib64/vendor.samsung.hardware.nfc@2.0.so
 vendor/lib64/libNfcProperties.so
@@ -1786,3 +1787,29 @@ vendor/lib64/libhal.wsm.samsung.so
 vendor/bin/vendor_cmd_tool
 vendor/bin/wvkprov
 vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov@1.0-service.rc
+vendor/etc/sec_config_oem
+vendor/etc/sec_config
+vendor/etc/init/init.vendor.onebinary.rc
+vendor/lib/libvndfwk_detect_jni.qti.so
+vendor/lib/libfloatingfeature.so
+vendor/lib/libprotobuf-cpp-full-3.9.1.so
+vendor/lib/librmnetctl.so
+vendor/lib/libhwbinder.so
+vendor/lib/libhidltransport.so
+vendor/lib/librilutils.so
+vendor/lib64/libfloatingfeature.so
+vendor/lib64/libprotobuf-cpp-full-3.9.1.so
+vendor/lib64/librmnetctl.so
+vendor/lib64/libhwbinder.so
+vendor/lib64/libvndfwk_detect_jni.qti.so
+vendor/lib64/libhidltransport.so
+vendor/lib64/librilutils.so
+vendor/etc/permissions/android.hardware.nfc.hcef.xml
+vendor/etc/permissions/android.hardware.nfc.hcef.xml
+vendor/etc/permissions/android.hardware.nfc.uicc.xml
+vendor/etc/permissions/android.hardware.nfc.ese.xml
+vendor/etc/permissions/android.hardware.nfc.xml
+vendor/etc/permissions/android.hardware.nfc.xml
+vendor/etc/permissions/android.hardware.nfc.hce.xml
+vendor/etc/permissions/android.hardware.nfc.hce.xml
+
