@@ -322,9 +322,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 # Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+#PRODUCT_PACKAGES += \
+#    android.hardware.health@2.1-impl \
+#    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -414,6 +414,7 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
+    init.qti.media.sh \
     android.hardware.media@1.0 \
     android.hardware.media.bufferpool@2.0 \
     android.hardware.media.c2@1.0 \
@@ -605,10 +606,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
 
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.2-service-qti \
-    android.hardware.usb.gadget@1.0-service-qti
 
 # Vendor libstdc++
 PRODUCT_PACKAGES += \

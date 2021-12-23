@@ -682,7 +682,7 @@ vendor/lib64/vendor.samsung.hardware.security.widevine.keyprov@1.0.so
 # Dumpstate
 vendor/bin/hw/android.hardware.dumpstate@1.1-service-lazy
 vendor/etc/init/android.hardware.dumpstate@1.1-service-lazy.rc
-vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service-lazy.xml
+-vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service-lazy.xml
 
 
 #firmware
@@ -1598,18 +1598,18 @@ vendor/lib64/libFace_Landmark_API.camera.samsung.so
 vendor/lib64/libhigh_dynamic_range_bokeh.so
 vendor/lib64/libHprFace_GAE_api.camera.samsung.so
 vendor/lib64/libHpr_RecGAE_cvFeature_v1.0.camera.samsung.so
-vendor/lib/liblivefocus_capture_engine
+vendor/lib/liblivefocus_capture_engine.so
 vendor/lib/liblivefocus_capture_interface.so
 vendor/lib/liblivefocus_preview_engine.so
 vendor/lib/liblivefocus_preview_interface.so
-vendor/lib64/liblivefocus_capture_engine
+vendor/lib64/liblivefocus_capture_engine.so
 vendor/lib64/liblivefocus_capture_interface.so
 vendor/lib64/liblivefocus_preview_engine.so
 vendor/lib64/liblivefocus_preview_interface.so
-vendor/lib/libMultiROIDetector.camera.samsung.soter@1
-vendor/lib64/libMultiROIDetector.camera.samsung.soter@1
+vendor/lib/libMultiROIDetector.camera.samsung.so
+vendor/lib64/libMultiROIDetector.camera.samsung.so
 vendor/lib64/libengmode15.so
-vendor/lib64/libsecril-dsds.so
+vendor/lib64/libsec-ril-dsds.so
 vendor/lib64/libvkservice.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib/libsecril-client.so
@@ -1627,7 +1627,7 @@ vendor/lib64/libengmode2lite.so
 vendor/bin/e_loop
 vendor/bin/hw/android.hardware.usb@1.1-service.wahoo
 vendor/etc/init/android.hardware.usb@1.1-service.wahoo.rc
-vendor/etc/vintf/manifest/android.hardware.usb@1.1-service.wahoo.xml
+-vendor/etc/vintf/manifest/android.hardware.usb@1.1-service.wahoo.xml
 vendor/lib/libFrucSSMLib.so
 vendor/lib/libLocalTM_capture_core.camera.samsung.so
 vendor/lib/libLocalTM_wrapper.camera.samsung.so
@@ -1665,7 +1665,7 @@ vendor/lib64/android.hardware.secure_element@1.0-impl-gto.so
 vendor/bin/hw/mfgloader
 vendor/etc/wifi/indoorchannel.info
 vendor/etc/init/wifi.rc
-vendor/etc/wlan_common_rc.rc	
+vendor/etc/wlan_common_rc
 vendor/bin/iof_vendor
 vendor/etc/init/icd_over_five_vendor.rc
 vendor/bin/hw/sec.android.hardware.nfc@1.2-service
@@ -1677,18 +1677,18 @@ vendor/lib64/libsecnativefeature.so
 #ServiceTracker
 vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
 vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
-vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
+-vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
 vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 #Auth Fw
 vendor/bin/hw/vendor.samsung.hardware.authfw@1.0-service
 vendor/etc/init/vendor.samsung.hardware.authfw@1.0-service.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.authfw@1.0-manifest.xml
+-vendor/etc/vintf/manifest/vendor.samsung.hardware.authfw@1.0-manifest.xml
 vendor/lib64/vendor.samsung.hardware.authfw@1.0.so
 #hqm
 vendor/bin/hw/vendor.samsung.hardware.hqm@1.0-service
 vendor/etc/init/vendor.samsung.hardware.hqm@1.0-service.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.hqm@1.0-manifest.xml
+-vendor/etc/vintf/manifest/vendor.samsung.hardware.hqm@1.0-manifest.xml
 vendor/lib/vendor.samsung.hardware.hqm@1.0.so
 vendor/lib/libhqm_hwparam.so
 vendor/lib64/vendor.samsung.hardware.hqm@1.0.so
@@ -1696,7 +1696,7 @@ vendor/lib64/libhqm_hwparam.so
 #hyper-service
 vendor/bin/hw/vendor.samsung.hardware.hyper-service
 vendor/etc/init/hyper-default-sec.rc
-vendor/etc/vintf/manifest/hyper-default-sec.xml
+-vendor/etc/vintf/manifest/hyper-default-sec.xml
 vendor/lib64/libhyper.so
 #drk
 vendor/bin/hw/vendor.samsung.hardware.security.drk@2.0-service
@@ -1724,10 +1724,10 @@ vendor/etc/init/vendor.samsung.hardware.tlc.iccc@1.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.tlc.payment@1.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.tlc.tima@1.1-service.rc
 vendor/etc/init/vendor.samsung.hardware.tlc.ucm@2.0-service.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.atn@1.0-manifest.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.hdm@1.1-manifest.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.iccc@1.0-manifest.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.tima@1.0-manifest.xml
+-vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.atn@1.0-manifest.xml
+-vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.hdm@1.1-manifest.xml
+-vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.iccc@1.0-manifest.xml
+-vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.tima@1.0-manifest.xml
 vendor/lib64/vendor.samsung.hardware.tlc.atn@1.0.so
 vendor/lib64/vendor.samsung.hardware.tlc.atn@1.0-impl.so
 vendor/lib64/libtlc_direct_comm_atn.so
@@ -1771,7 +1771,7 @@ vendor/bin/time_client
 vendor/etc/init/init.time_daemon.rc
 vendor/bin/vendor.samsung.hardware.security.engmode@1.0-service
 vendor/etc/init/vendor.samsung.hardware.security.engmode@1.0-service.rc
-vendor/etc/vintf/manifest/engmode_manifest.xml
+-vendor/etc/vintf/manifest/engmode_manifest.xml
 vendor/lib64/vendor.samsung.hardware.security.engmode@1.0.so
 vendor/bin/vendor.samsung.hardware.security.proca@2.0-service
 vendor/etc/init/pa_daemon_qsee.rc
