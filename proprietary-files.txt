@@ -1269,6 +1269,8 @@ system_ext/lib64/vendor.qti.hardware.data.connection@1.0.so
 system_ext/lib64/vendor.qti.hardware.data.connection@1.1.so
 system_ext/lib64/vendor.qti.hardware.data.iwlan@1.0.so
 vendor/bin/hw/rild
+-vendor/lib/libril.so
+-vendor/lib64/libril.so
 vendor/bin/adpl
 vendor/bin/ATFWD-daemon
 vendor/bin/ipacm-diag
