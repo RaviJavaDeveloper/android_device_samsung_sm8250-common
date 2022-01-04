@@ -1,0 +1,5 @@
+### RFKILL
+type rfkilldisabled_prop, property_type;
+
+### other properties
+type vendor_factory_prop, property_type;

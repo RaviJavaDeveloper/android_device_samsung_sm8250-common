@@ -1,0 +1,5 @@
+get_prop(hal_nfc_default, vendor_factory_prop)
+
+# Allow hal_nfc_default to read, write and create files in vendor_nfc_vendor_data_file
+allow hal_nfc_default vendor_nfc_vendor_data_file:dir search;
+allow hal_nfc_default vendor_nfc_vendor_data_file:file create_file_perms;
