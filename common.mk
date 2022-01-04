@@ -171,6 +171,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5:32 \
     android.hardware.camera.provider@2.5-legacy \
     android.hardware.camera.provider@2.6:32 \
+    android.hardware.graphics.common@1.0:32 \
     libcamera2ndk_vendor \
     libgui_vendor \
     Snap \
