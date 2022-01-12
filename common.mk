@@ -446,6 +446,13 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti_telephony_utils.xml \
     telephony-ext
+    
+#imspermission
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.sec.imslogger.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.sec.imslogger.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.sec.imsservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.sec.imsservice.xml \
+    $(LOCAL_PATH)/configs/privapp_whitelist_com.sec.imslogger.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp_whitelist_com.sec.imslogger.xml \
+    $(LOCAL_PATH)/configs/privapp_whitelist_com.sec.imsservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp_whitelist_com.sec.imsservice.xml
 
 PRODUCT_BOOT_JARS += \
     telephony-ext

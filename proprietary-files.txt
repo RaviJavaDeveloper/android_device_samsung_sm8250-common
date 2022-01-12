@@ -1411,12 +1411,9 @@ vendor/lib64/librilutils.so
 vendor/lib/vendor.samsung.hardware.radio@2.0.so
 vendor/lib/vendor.samsung.hardware.radio@2.1.so
 vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
-
 system/bin/imsd
 system/etc/init/imsd.rc
-system/etc/permissions/privapp_whitelist_com.sec.imsservice.xml
 system/etc/permissions/imsmanager_library.xml
-system/etc/permissions/privapp-permissions-com.sec.imslogger.xml
 system/etc/permissions/vsimservice_library.xml
 -system/priv-app/ImsLogger/ImsLogger.apk
 -system/priv-app/EpdgService/EpdgService.apk
