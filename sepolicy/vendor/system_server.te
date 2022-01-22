@@ -1,0 +1,8 @@
+binder_call(system_server, hal_camera_default)
+binder_call(system_server, hal_power_default)
+binder_call(system_server, vaultkeeperd)
+
+allow system_server proc_last_kmsg:file r_file_perms;
+allow system_server vendor_file:dir { open read };
+
+allow system_server hal_miscpower_hwservice:hwservice_manager find;

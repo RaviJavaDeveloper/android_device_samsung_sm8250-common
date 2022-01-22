@@ -1,0 +1,25 @@
+### Bluetooth
+persist.vendor.bluetooth.a2dp.               u:object_r:vendor_bluetooth_prop:s0
+
+
+ro.vendor.camera.                            u:object_r:vendor_camera_prop:s0
+vendor.camera.                               u:object_r:vendor_camera_prop:s0
+
+### fastcharge
+persist.vendor.sec.fastchg_enabled           u:object_r:vendor_fastcharge_prop:s0
+
+
+### NFC
+vendor.nfc.fw.                               u:object_r:vendor_nfc_prop:s0
+
+### radio
+ro.vendor.multisim.                          u:object_r:vendor_radio_prop:s0
+ro.vendor.radio.                             u:object_r:vendor_radio_prop:s0
+
+# Thermal
+vendor.sys.thermal.                          u:object_r:thermal_engine_prop:s0
+
+# Vaultkeeper
+vendor.ro.security.vaultkeeper.              u:object_r:vendor_sec_vaultkeeper_prop:s0
+vendor.security.vaultkeeper.                 u:object_r:vendor_sec_vaultkeeper_prop:s0
+ro.vendor.security.vaultkeeper.              u:object_r:vendor_sec_vaultkeeper_prop:s0

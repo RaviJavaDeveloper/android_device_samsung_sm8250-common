@@ -1,0 +1,8 @@
+allow hal_drm_default cpk_efs_file:dir r_dir_perms;
+allow hal_drm_default cpk_efs_file:file r_file_perms;
+allow hal_drm_default efs_file:dir { read open search };
+allow hal_drm_default efs_file:file r_file_perms;
+allow hal_drm_default sec_efs_file:file r_file_perms;
+allow hal_drm_default sec_poc_file:dir { read open search };
+allow hal_drm_default sec_poc_file:file r_file_perms;
+allow hal_drm_default tee_efs_file:dir { search };
