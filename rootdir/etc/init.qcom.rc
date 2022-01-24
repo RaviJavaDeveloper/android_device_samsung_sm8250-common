@@ -30,7 +30,30 @@ import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
-import /prism/etc/init/init.rc
+service scs /system/bin/scs
+    class main
+    user root
+    group root system
+    oneshot
+    disabled
+    
+on fs
+    wait /dev/block/bootdevice/by-name/omr
+    mount ext4 /dev/block/bootdevice/by-name/omr /omr nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
+    chown root system /omr
+    chmod 0771 /omr
+on property:vendor.security.vaultkeeper.native=1
+    start scs
+
+on post-fs
+    setprop ro.omc.build.version G781BODM4CUH3
+    setprop ro.omc.build.id 42528997
+    setprop ro.omc.changetype DATA_RESET_ON,TRUE
+    setprop ro.simbased.changetype NO_DFLT_CSC,OMC
+    setprop ro.omc.disabler FALSE
+    setprop ro.omc.multi_csc ODM
+    chown radio system /efs/imei/countryiso_code.json
+    chmod 0664 /efs/imei/countryiso_code.json
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug

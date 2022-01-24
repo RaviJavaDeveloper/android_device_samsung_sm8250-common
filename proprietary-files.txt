@@ -1765,3 +1765,15 @@ vendor/bin/wvkprov
 vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov@1.0-service.rc
 vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so
 vendor/lib/vendor.samsung.hardware.camera.device@5.0-impl.so
+
+
+vendor/etc/init/vaultkeeper_common.rc
+vendor/lib64/libdsms_vendor.so
+vendor/lib64/vendor.samsung.hardware.security.vaultkeeper@2.0.so
+vendor/etc/libse-gto-hal.conf
+vendor/etc/init/init.vendor.onebinary.rc
+vendor/lib64/libtswrappercommon.so
+vendor/lib64/vendor.samsung.frameworks.security.dsms@1.0.so
+vendor/etc/sec_config
+vendor/etc/sec_config_oem
+vendor/etc/init/init.vendor.sysfw.rc
