@@ -59,12 +59,6 @@
         <transport>hwbinder</transport>
         <version>1.0</version>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.drm</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.3::ICryptoFactory/widevine</fqname>
-        <fqname>@1.3::IDrmFactory/widevine</fqname>
-    </hal>
     <hal format="hidl" override="true">
         <name>android.hardware.gatekeeper</name>
         <transport>hwbinder</transport>
@@ -76,26 +70,6 @@
         </interface>
         <fqname>@1.0::IGatekeeper/default</fqname>
         <fqname>@1.0::IGatekeeper/mdfpp</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.gnss</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IGnss</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IGnss/gnss_vendor</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.health</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IHealth</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::IHealth/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.media.omx</name>
@@ -131,8 +105,8 @@
         <transport>hwbinder</transport>
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
-        <fqname>@1.4::IRadio/slot1</fqname>
-        <fqname>@1.4::IRadio/slot2</fqname>
+        <fqname>@1.5::IRadio/slot1</fqname>
+        <fqname>@1.5::IRadio/slot2</fqname>
     </hal>
     <hal format="hidl" override="true">
         <name>android.hardware.radio.config</name>
@@ -151,12 +125,14 @@
     <hal format="hidl" override="true">
         <name>android.hardware.secure_element</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.2</version>
         <interface>
             <name>ISecureElement</name>
             <instance>eSE1</instance>
+            <instance>SIM1</instance>
         </interface>
-        <fqname>@1.0::ISecureElement/eSE1</fqname>
+        <fqname>@1.2::ISecureElement/eSE1</fqname>
+        <fqname>@1.2::ISecureElement/SIM1</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.soundtrigger</name>
@@ -430,16 +406,6 @@
         <fqname>@1.0::ISehBluetoothAudioOffload/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.samsung.hardware.camera.provider</name>
-        <transport>hwbinder</transport>
-        <version>4.0</version>
-        <interface>
-            <name>ISehCameraProvider</name>
-            <instance>legacy/0</instance>
-        </interface>
-        <fqname>@4.0::ISehCameraProvider/legacy/0</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.samsung.hardware.gnss</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -449,24 +415,9 @@
         </interface>
         <fqname>@2.0::ISehGnss/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.health</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>ISehHealth</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
+    <hal format="aidl">
         <name>vendor.samsung.hardware.media.converter</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISehColorConverterStore</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISehColorConverterStore/default</fqname>
+        <fqname>ISehColorConverterStore/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.miscpower</name>
@@ -478,25 +429,17 @@
         </interface>
         <fqname>@2.0::ISehMiscPower/default</fqname>
     </hal>
-    <hal format="hidl" override="true">
-        <name>vendor.samsung.hardware.radio</name>
-        <transport>hwbinder</transport>
-    </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.radio</name>
         <transport>hwbinder</transport>
-        <version>2.1</version>
+        <version>2.2</version>
         <interface>
             <name>ISehRadio</name>
             <instance>slot1</instance>
             <instance>slot2</instance>
         </interface>
-        <fqname>@2.1::ISehRadio/slot1</fqname>
-        <fqname>@2.1::ISehRadio/slot2</fqname>
-    </hal>
-    <hal format="hidl" override="true">
-        <name>vendor.samsung.hardware.radio.bridge</name>
-        <transport>hwbinder</transport>
+        <fqname>@2.2::ISehRadio/slot1</fqname>
+        <fqname>@2.2::ISehRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.radio.bridge</name>
@@ -509,10 +452,6 @@
         </interface>
         <fqname>@2.0::ISehBridge/slot1</fqname>
         <fqname>@2.0::ISehBridge/slot2</fqname>
-    </hal>
-    <hal format="hidl" override="true">
-        <name>vendor.samsung.hardware.radio.channel</name>
-        <transport>hwbinder</transport>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.radio.channel</name>
@@ -530,7 +469,7 @@
         <fqname>@2.0::ISehChannel/imsd</fqname>
         <fqname>@2.0::ISehChannel/imsd2</fqname>
     </hal>
-    <hal format="hidl">
+    <hal format="hidl" override="true">
         <name>vendor.samsung.hardware.security.drk</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -550,24 +489,25 @@
         </interface>
         <fqname>@1.0::ISehHdcpKeyProvisioning/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.security.proca</name>
+    <hal format="hidl" override="true">
+        <name>vendor.samsung.hardware.security.sem</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>1.0</version>
         <interface>
-            <name>ISehProca</name>
+            <name>ISehSem</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::ISehProca/default</fqname>
+        <fqname>@1.0::ISehSem/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.security.vaultkeeper</name>
+    <hal format="hidl" override="true">
+        <name>vendor.samsung.hardware.security.skpm</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>1.0</version>
         <interface>
-            <name>ISehVaultKeeper</name>
+            <name>ISehSkpm</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::ISehSkpm/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.security.widevine.keyprov</name>
@@ -596,18 +536,20 @@
         <interface>
             <name>ISehSnap</name>
             <instance>default</instance>
+            <instance>secsnap</instance>
         </interface>
         <fqname>@1.2::ISehSnap/default</fqname>
+        <fqname>@1.2::ISehSnap/secsnap</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.sysinput</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.2</version>
         <interface>
             <name>ISehSysInputDev</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::ISehSysInputDev/default</fqname>
+        <fqname>@1.2::ISehSysInputDev/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.tlc.blockchain</name>
@@ -650,22 +592,13 @@
         <fqname>@2.2::ISehVibrator/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.samsung.hardware.wifi</name>
-        <transport>hwbinder</transport>
-        <version>2.1</version>
-        <interface>
-            <name>ISehWifi</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.samsung.hardware.wifi.supplicant</name>
         <transport>hwbinder</transport>
-        <version>3.0</version>
+        <version>3.1</version>
         <interface>
             <name>ISehSupplicant</name>
             <instance>default</instance>
         </interface>
-        <fqname>@3.0::ISehSupplicant/default</fqname>
+        <fqname>@3.1::ISehSupplicant/default</fqname>
     </hal>
 </manifest>

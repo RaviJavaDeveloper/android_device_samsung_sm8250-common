@@ -1,0 +1,87 @@
+init.qcom.rc:62:    # exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules msm_11ad_proxy
+init.qcom.rc:88:    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
+init.qcom.rc:89:    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qti.can.sh
+init.qcom.rc:441:service nqnfcinfo /system/vendor/bin/nqnfcinfo
+init.qcom.rc:447:service iop /system/vendor/bin/iop
+init.qcom.rc:454:service qcomsysd /system/vendor/bin/qcom-system-daemon
+init.qcom.rc:466:service vendor.ssr_setup /system/vendor/bin/ssr_setup
+init.qcom.rc:470:service vendor.ss_ramdump /system/vendor/bin/subsystem_ramdump
+init.qcom.rc:546:service qcom-c_core-sh  /vendor/bin/init.qcom.class_core.sh
+init.qcom.rc:551:service qcom-c_main-sh /vendor/bin/init.class_main.sh
+init.qcom.rc:561:service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
+init.qcom.rc:567:service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
+init.qcom.rc:586:# service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
+init.qcom.rc:600:# service vendor.wigig_supplicant /vendor/bin/hw/wpa_supplicant \
+init.qcom.rc:623:# service wigignpt /vendor/bin/wigignpt
+init.qcom.rc:635:# service vendor.sensingdaemon /vendor/bin/sensingdaemon
+init.qcom.rc:682:# service ptt_socket_app /system/vendor/bin/ptt_socket_app -d
+init.qcom.rc:689:# service ptt_ffbm /system/vendor/bin/ptt_socket_app -f -d
+init.qcom.rc:695:# service wifi_ftmd /system/vendor/bin/wifi_ftmd
+init.qcom.rc:703:service qfp-daemon /vendor/bin/qfp-daemon
+init.qcom.rc:711:service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
+init.qcom.rc:731:service ssgqmigd /vendor/bin/ssgqmigd
+init.qcom.rc:737:service mlid /vendor/bin/mlid
+init.qcom.rc:743:service loc_launcher /system/vendor/bin/loc_launcher
+init.qcom.rc:748:service drmdiag /system/vendor/bin/drmdiagapp
+init.qcom.rc:760:service qcom-sh /vendor/bin/init.qcom.sh
+init.qcom.rc:766:# service crashdata-sh /vendor/bin/init.qcom.crashdata.sh
+init.qcom.rc:771:service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
+init.qcom.rc:786:# service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
+init.qcom.rc:792:# service wifi-crda /vendor/bin/init.crda.sh
+init.qcom.rc:806:service qvop-daemon /vendor/bin/qvop-daemon
+init.qcom.rc:811:service vendor.atfwd /vendor/bin/ATFWD-daemon
+init.qcom.rc:816:# service hostapd_fst /vendor/bin/hw/hostapd -dd -g /data/vendor/wifi/hostapd/global
+init.qcom.rc:824:service ims_regmanager /system/vendor/bin/exe-ims-regmanagerprocessnative
+init.qcom.rc:841:service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
+init.qcom.rc:848:service vendor.ril-daemon3 /vendor/bin/hw/rild -c 3
+init.qcom.rc:868:service vendor.ssr_diag /system/vendor/bin/ssr_diag
+init.qcom.rc:900:service diag_mdlog_start /system/vendor/bin/diag_mdlog
+init.qcom.rc:907:service diag_mdlog_stop /system/vendor/bin/diag_mdlog -k
+init.qcom.rc:923:service vm_bms /vendor/bin/vm_bms
+init.qcom.rc:928:service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
+init.qcom.rc:934:service vendor.msm_irqbal_lb /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance_little_big.conf
+init.qcom.rc:940:service vendor.msm_irqbl_sdm630 /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance_sdm630.conf
+init.qcom.rc:947:service vendor.LKCore-dbg /vendor/bin/LKCore
+init.qcom.rc:955:service vendor.LKCore-rel /vendor/bin/LKCore
+init.qcom.rc:962:service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
+init.qcom.rc:967:service esepmdaemon /system/vendor/bin/esepmdaemon
+init.qcom.rc:977:service poweroffhandler /system/vendor/bin/poweroffhandler
+init.qcom.rc:1000:#service time_daemon /vendor/bin/time_daemon
+init.qcom.rc:1013:service vendor.power_off_alarm /vendor/bin/power_off_alarm
+init.qcom.rc:1019:service vendor.hbtp /vendor/bin/hbtp_daemon
+init.qcom.rc:1026:service chre /vendor/bin/chre
+init.qcom.rc:1050:service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
+init.qcom.factory.rc:35:service vendor.mmid /vendor/bin/mmid
+init.qcom.factory.rc:141:service vendor.audio_tc53 /vendor/bin/mm-audio-ftm -tc 53
+init.qcom.factory.rc:148:service vendor.audio_tc51 /vendor/bin/mm-audio-ftm -tc 51
+init.qcom.factory.rc:154:service vendor.audio_tc56 /vendor/bin/mm-audio-ftm -tc 56
+init.qcom.factory.rc:160:service vendor.audio_tc222 /vendor/bin/mm-audio-ftm -tc 222
+init.qcom.factory.rc:166:service vendor.audio_tc228 /vendor/bin/mm-audio-ftm -tc 228
+init.qcom.factory.rc:172:service vendor.audio_tc229 /vendor/bin/mm-audio-ftm -tc 229
+init.qcom.factory.rc:178:service vendor.audio_tc230 /vendor/bin/mm-audio-ftm -tc 230
+init.qcom.factory.rc:184:service vendor.audio_tc225 /vendor/bin/mm-audio-ftm -tc 225
+init.qcom.factory.rc:190:service vendor.audio_tc246 /vendor/bin/mm-audio-ftm -tc 246
+init.qcom.factory.rc:196:service vendor.audio_tc247 /vendor/bin/mm-audio-ftm -tc 247
+init.qcom.factory.rc:202:service vendor.audio_tc250 /vendor/bin/mm-audio-ftm -tc 250
+init.qcom.factory.rc:208:service vendor.audio_tc251 /vendor/bin/mm-audio-ftm -tc 251
+init.qcom.factory.rc:214:service vendor.audio_tc252 /vendor/bin/mm-audio-ftm -tc 252
+init.qcom.factory.rc:220:service vendor.audio_tc253 /vendor/bin/mm-audio-ftm -tc 253
+init.qcom.factory.rc:226:service vendor.audio_tc11 /vendor/bin/mm-audio-ftm -tc 11 -file /data/vendor/audio/ftm_headset_mic_record.wav
+init.qcom.factory.rc:232:service vendor.audio_tc101 /vendor/bin/mm-audio-ftm -tc 101 -file /data/vendor/audio/ftm_mic1_record.wav
+init.qcom.factory.rc:238:service vendor.audio_tc102 /vendor/bin/mm-audio-ftm -tc 102 -file /data/vendor/audio/ftm_mic2_record.wav
+init.qcom.factory.rc:244:service vendor.audio_tc103 /vendor/bin/mm-audio-ftm -tc 103 -file /data/vendor/audio/ftm_mic3_record.wav
+init.qcom.factory.rc:250:service vendor.audio_tc104 /vendor/bin/mm-audio-ftm -tc 104 -file /data/vendor/audio/ftm_mic4_record.wav
+init.samsung.rc:251:service factory_ssc /vendor/bin/factory.ssc
+init.samsung.rc:257:service argos-daemon /vendor/bin/argosd
+init.target.rc:149:    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_qca6390 qca_cld3_qca6490
+init.target.rc:207:service vendor.lowi /vendor/bin/sscrpcd
+init.target.rc:214:service vendor.pd_mapper /vendor/bin/pd-mapper
+init.target.rc:220:service vendor.per_mgr /vendor/bin/pm-service
+init.target.rc:226:service vendor.per_proxy /vendor/bin/pm-proxy
+init.target.rc:232:service vendor.mdm_helper /vendor/bin/mdm_helper
+init.target.rc:237:service vendor.mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
+init.target.rc:250:service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -b 128 -t HELIUM
+init.target.rc:256:service dcvs-sh /vendor/bin/init.qti.dcvs.sh
+init.qcom.usb.rc:62:#    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.usb.sh
+init.qcom.usb.rc:68:#    exec u:r:vendor-qti-testscripts:s0 -- /vendor/bin/sh /vendor/bin/init.qti.usb.debug.sh
+init.qcom.usb.rc:136:    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.usb.sh

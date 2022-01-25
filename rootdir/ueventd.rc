@@ -198,6 +198,7 @@ firmware_directories /vendor/firmware_mnt/image/ /vendor/firmware-modem/image/
 /dev/msm_vidc_dec_sec     0660   system     audio
 /dev/msm_vidc_enc         0660   system     audio
 /dev/msm_rotator          0660   system     system
+/dev/hw_random            0600   root       root
 /dev/sdsprpc-smd          0660   system     system
 
 #permissions for audio
@@ -488,3 +489,32 @@ firmware_directories /vendor/firmware_mnt/image/ /vendor/firmware-modem/image/
 /sys/devices/platform/soc/*.i2c/i2c-*/*-*/iio:device*   in_temp_raw                     0664    system  system
 /sys/devices/platform/soc/*.i2c/i2c-*/*-*/iio:device*   in_temp_scale                   0664    system  system
 /sys/devices/platform/soc/*.i2c/i2c-*/*-*/iio:device*   in_temp_scale_available         0664    system  system
+
+
+# flicker sensor
+/sys/class/sensors/als_rear    name                    0444    system    radio
+/sys/class/sensors/als_rear    vendor                  0444    system    radio
+/sys/class/sensors/als_rear    part_type               0444    system    radio
+/sys/class/sensors/als_rear    device_id               0444    system    radio
+/sys/class/sensors/als_rear    als_flush               0220    system    radio
+/sys/class/sensors/als_rear    write_reg               0220    system    system
+/sys/class/sensors/als_rear    read_reg                0664    system    system
+/sys/class/sensors/als_rear    eol_mode                0664    system    system
+/sys/class/sensors/als_rear    eol_spec                0444    system    system
+/sys/class/sensors/als_rear    als_factory_cmd         0444    system    system
+/sys/class/sensors/als_rear    als_red                 0444    system    system
+/sys/class/sensors/als_rear    als_green               0444    system    system
+/sys/class/sensors/als_rear    als_blue                0444    system    system
+/sys/class/sensors/als_rear    als_ir                  0444    system    system
+/sys/class/sensors/als_rear    als_clear               0444    system    system
+/sys/class/sensors/als_rear    als_wideband            0444    system    system
+/sys/class/sensors/als_rear    als_version             0444    system    system
+/sys/class/sensors/als_rear    als_raw_data            0444    system    system
+/sys/class/sensors/als_rear    als_debug               0664    system    system
+/sys/class/sensors/als_rear    flicker_data            0444    system    system
+/sys/class/sensors/als_rear    i2c_err_cnt             0664    system    system
+/sys/class/sensors/als_rear    int_pin_check           0444    system    system
+/sys/class/sensors/als_rear    mode_cnt                0664    system    system
+/sys/class/sensors/als_rear    curr_adc                0664    system    system
+/sys/class/sensors/als_rear    sensor_info             0444    system    system
+/dev/als_rear                                          0600    system    system

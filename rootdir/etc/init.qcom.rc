@@ -30,35 +30,13 @@ import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
-service scs /system/bin/scs
-    class main
-    user root
-    group root system
-    oneshot
-    disabled
-    
-on fs
-    wait /dev/block/bootdevice/by-name/omr
-    mount ext4 /dev/block/bootdevice/by-name/omr /omr nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
-    chown root system /omr
-    chmod 0771 /omr
-on property:vendor.security.vaultkeeper.native=1
-    start scs
-
-on post-fs
-    setprop ro.omc.build.version G781BODM4CUH3
-    setprop ro.omc.build.id 42528997
-    setprop ro.omc.changetype DATA_RESET_ON,TRUE
-    setprop ro.simbased.changetype NO_DFLT_CSC,OMC
-    setprop ro.omc.disabler FALSE
-    setprop ro.omc.multi_csc ODM
-    chown radio system /efs/imei/countryiso_code.json
-    chmod 0664 /efs/imei/countryiso_code.json
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
-    
+    mount tracefs tracefs /sys/kernel/tracing
+    chmod 0755 /sys/kernel/tracing
+
   # create symlink for vendor mount points
     symlink /vendor/firmware_mnt /firmware
     symlink /vendor/bt_firmware /bt_firmware
@@ -923,7 +901,6 @@ service diag_mdlog_start /system/vendor/bin/diag_mdlog
     class late_start
     user shell
     group system oem_2901 sdcard_rw sdcard_r media_rw
-    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
@@ -1012,7 +989,7 @@ on property:init.svc.surfaceflinger=restarting
 # Logcat dump daemon, dumps logs to logdump partition
 service logdumpd /system/bin/logcat -b all -v threadtime -D -w /dev/block/bootdevice/by-name/logdump
     class core
-    task_profiles ServiceCapacityLow
+    writepid /dev/cpuset/system-background/tasks
     seclabel u:r:logdumpd:s0
     disabled
 
@@ -1078,5 +1055,5 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
     capabilities BLOCK_SUSPEND
     ioprio rt 4
-    task_profiles ProcessCapacityHigh HighPerformance
+    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     onrestart restart audioserver

@@ -27,15 +27,6 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 # Create carrier folder for HiddenMenu
-
-
-service scs /system/bin/scs
-    class main
-    user root
-    group root system
-    oneshot
-    disabled
-
 on post-fs
     mkdir /efs/carrier 0755 radio system
     chown radio system /efs/carrier
@@ -176,6 +167,12 @@ on boot
 # SSWAP
     write /proc/sys/vm/swappiness 160
 
+# Performance
+    chmod 0664 /dev/cpuset/restricted/cpus
+    write /dev/cpuset/restricted/cpus 0-7
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpu4-cpu-ddr-latfloor/min_freq
+    chown root system /sys/class/devfreq/soc:qcom,cpu4-cpu-ddr-latfloor/min_freq
+
 # SDHMS Slowdown : Cpuset
     mkdir /dev/cpuset/abnormal
     write /dev/cpuset/abnormal/cpus 0-3
@@ -197,9 +194,9 @@ on boot
     chmod 0664 /dev/cpuset/moderate/tasks
     chmod 0664 /dev/cpuset/moderate/cpus
 
-# SQZR
-on property:sys.boot_completed=1
-    swapon_all /vendor/etc/fstab.sqzr
+#Performance
+    chmod 0664 /dev/cpuset/restricted/cpus
+    write /dev/cpuset/restricted/cpus 0-7
 
 # Pageboostd
 on property:sys.boot_completed=1
@@ -225,3 +222,15 @@ on post-fs-data && property:ro.csc.sales_code=TMB
     mount none /mnt/temp/priv-app/SprintHub /system/carrier/priv-app/SprintHub bind
     umount /mnt/temp
     rmdir /mnt/temp
+
+# some priv-apps of DSH bind mount to DSA priv-apps
+on post-fs-data && property:ro.csc.sales_code=DSA
+    umount /system/carrier
+    mkdir /mnt/temp
+    mount none /system/carrier/DSH /mnt/temp bind
+    mount none /system/carrier/DSA /system/carrier bind
+    mount none /mnt/temp/priv-app/MyAccountDsh /system/carrier/priv-app/MyAccountDsh bind
+    mount none /mnt/temp/priv-app/VisualVoicemailDsh_Stub /system/carrier/priv-app/VisualVoicemailDsh_Stub bind
+    umount /mnt/temp
+    rmdir /mnt/temp
+

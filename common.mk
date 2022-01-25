@@ -40,7 +40,7 @@ TARGET_USES_AOSP_RECOVERY := true
 TARGET_USES_CUSTOM_AVB_KEY := true
 
 # VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 29 30
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
 PRODUCT_USE_PRODUCT_VNDK_OVERRIDE := true
 
 # Permissions
@@ -316,6 +316,11 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.samsung \
     vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.samsung
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl:64 \
+    android.hardware.gatekeeper@1.0-service
+
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
@@ -326,8 +331,8 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.0-impl.vendor \
-    android.hardware.health@2.0-service
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
