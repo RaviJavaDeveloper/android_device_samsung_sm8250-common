@@ -172,7 +172,7 @@ vendor/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 
 # Bluetooth (aptX) - from crosshatch - RQ1A.201205.003
 system/lib64/libaptX_encoder.so
-
+system/lib64/libaptXHD_encoder.so
 
 # Camera
 vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
@@ -449,6 +449,7 @@ vendor/lib64/vendor.display.postproc@1.0.so
 # DRM
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/bin/vendor.samsung.hardware.security.widevine.keyprov@1.0-service
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov@1.0-service.rc
 vendor/lib/mediadrm/libwvdrmengine.so
@@ -588,8 +589,15 @@ vendor/lib64/ftm_fm_lib.so
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-mdfpp.rc
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+vendor/lib/android.hardware.gatekeeper@1.0-impl.so
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/gatekeeper.mdfpp.so
+vendor/lib64/android.hardware.gatekeeper@1.0-impl.so
+
 
 # GPS
 vendor/bin/loc_launcher
@@ -706,11 +714,6 @@ vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-diag.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libVkLayer_q3dtools.so
-
-# Hotword
--product/priv-app/HotwordEnrollmentOKGoogleEx3HEXAGON/HotwordEnrollmentOKGoogleEx3HEXAGON.apk;PRESIGNED
--product/priv-app/HotwordEnrollmentXGoogleEx3HEXAGON/HotwordEnrollmentXGoogleEx3HEXAGON.apk;PRESIGNED
-
 
 # IO Prefetcher
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
@@ -1223,6 +1226,7 @@ vendor/lib/vendor.qti.hardware.wigig.netperftuner@1.0.so
 vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
 vendor/lib64/vendor.samsung.hardware.wifi@2.0.so
 vendor/lib64/vendor.samsung.hardware.wifi@2.1.so
+vendor/lib64/vendor.samsung.hardware.wifi@2.2.so
 vendor/lib64/vendor.samsung.hardware.wifi.hostapd@3.0.so
 vendor/lib64/vendor.samsung.hardware.wifi.supplicant@3.0.so
 
@@ -1281,6 +1285,7 @@ vendor/lib64/libLocalTM_capture_core.camera.samsung.so
 vendor/lib64/libLocalTM_wrapper.camera.samsung.so
 vendor/lib64/libLocalTM_preview_core.so
 vendor/lib64/libsnap_vndk.so
+vendor/lib/libsnap_vndk.so
 vendor/lib64/libsnaplite_native.so
 vendor/lib64/libsnaplite_wrapper.so
 vendor/lib64/libsnap_v1.samsung.so
@@ -1449,5 +1454,61 @@ vendor/lib64/libfloatingfeature.so
 vendor/lib64/libqmiextservices.so
 vendor/lib64/libqmiservices-sem-ext.so
 vendor/lib64/libstork_shared.so
-
-
+vendor/lib64/unihal_main@1.3.so
+vendor/lib/unihal_main@1.3.so
+vendor/lib64/unihal_cutils@1.3.so
+vendor/lib/unihal_cutils@1.3.so
+vendor/lib64/unihal_uniplugin@1.0.so
+vendor/lib/unihal_uniplugin@1.0.so
+#system/lib64/libcamera_metadata.so
+#system/lib/libcamera_metadata.so
+vendor/lib64/libvdis_core.so
+vendor/lib/libvdis_core.so
+vendor/lib64/libIMUSensor.so
+vendor/lib64/libvdis_interface.so
+vendor/lib64/libPetDetector_interface.so
+vendor/lib64/libvideobeauty_interface.so
+vendor/lib64/libSSMAutoTrigger_interface.so
+vendor/lib64/libsmartfocus_interface.so
+vendor/lib64/libPersonal_interface.so
+vendor/lib64/libmultiviewspin_interface.so
+vendor/lib64/libmultiviewzoom_interface.so
+vendor/lib64/libjpegQtable_interface.so
+vendor/lib64/libfocuspeaking_interface.so
+vendor/lib64/libDVTracking_interface.so
+vendor/lib64/libDepthBokehVideo_interface.so
+vendor/lib64/libhypermotion_interface.so
+vendor/lib/libIMUSensor.so
+vendor/lib/libvdis_interface.so
+vendor/lib/libPetDetector_interface.so
+vendor/lib/libvideobeauty_interface.so
+vendor/lib/libSSMAutoTrigger_interface.so
+vendor/lib/libsmartfocus_interface.so
+vendor/lib/libPersonal_interface.so
+vendor/lib/libmultiviewspin_interface.so
+vendor/lib/libmultiviewzoom_interface.so
+vendor/lib/libjpegQtable_interface.so
+vendor/lib/libfocuspeaking_interface.so
+vendor/lib/libDVTracking_interface.so
+vendor/lib/libDepthBokehVideo_interface.so
+vendor/lib/libhypermotion_interface.so
+vendor/lib/libObjectDetector_v1.camera.samsung.so
+vendor/lib/libMoonVerifier_v1.camera.samsung.so
+vendor/lib64/libObjectDetector_v1.camera.samsung.so
+vendor/lib64/libMoonVerifier_v1.camera.samsung.so
+vendor/lib64/libvideobeauty.arcsoft.so
+vendor/lib/libvideobeauty.arcsoft.so
+vendor/lib64/libSSM_AutoTrigger.so
+vendor/lib/libSSM_AutoTrigger.so
+vendor/lib64/libPersonal_core.camera.samsung.so
+vendor/lib/libPersonal_core.camera.samsung.so
+vendor/lib64/libvideotransitioneffect_roll.arcsoft.so
+vendor/lib/libvideotransitioneffect_roll.arcsoft.so
+vendor/lib64/libvideotransitioneffect_zoom.arcsoft.so
+vendor/lib/libvideotransitioneffect_zoom.arcsoft.so
+vendor/lib64/libfocuspeaking.so
+vendor/lib/libfocuspeaking.so
+vendor/lib64/libhypermotion_core.so
+vendor/lib/libhypermotion_core.so
+vendor/lib64/libfastcvdsp_stub.so
+vendor/lib/libfastcvdsp_stub.so
