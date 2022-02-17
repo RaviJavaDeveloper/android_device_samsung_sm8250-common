@@ -432,30 +432,24 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
     libsensorndkbridge
 
-# Soong namespaces
+## Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/samsung
 
-# Telephony
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    telephony-ext
     
-#imspermission
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.sec.imslogger.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.sec.imslogger.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.sec.imsservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.sec.imsservice.xml \
-    $(LOCAL_PATH)/configs/privapp_whitelist_com.sec.imslogger.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp_whitelist_com.sec.imslogger.xml \
-    $(LOCAL_PATH)/configs/privapp_whitelist_com.sec.imsservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp_whitelist_com.sec.imsservice.xml
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.samsung
+    
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.samsung-libperfmgr
+    
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.samsung
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml
