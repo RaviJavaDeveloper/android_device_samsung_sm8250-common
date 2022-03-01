@@ -1,0 +1,7 @@
+type qti_init_shell;
+type sensors_persist_file;
+allow qti_init_shell mnt_vendor_file:dir create_dir_perms;
+
+allow qti_init_shell sensors_persist_file:dir create_dir_perms;
+
+set_prop(qti_init_shell, ctl_default_prop)

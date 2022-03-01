@@ -1,0 +1,3 @@
+type time_daemon;
+type timeservice_app;
+r_dir_file(time_daemon, timeservice_app)

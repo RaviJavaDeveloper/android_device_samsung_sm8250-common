@@ -1,0 +1,2 @@
+type wcnss_service;
+r_dir_file(wcnss_service, vendor_convergence_data_file)
