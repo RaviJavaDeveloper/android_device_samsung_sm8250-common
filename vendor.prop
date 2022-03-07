@@ -142,6 +142,10 @@ vendor.display.qdcm.mode_combine=1
 vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
 
+# Chipset
+ro.soc.manufacturer=QTI
+ro.soc.model=SM8250
+
 # DRM
 drm.service.enabled=true
 
@@ -152,7 +156,7 @@ persist.vendor.qfp=true
 ro.frp.pst=/dev/block/persistent
 
 # Gatekeeper
-vendor.gatekeeper.disable_spu=true
+ro.hardware.gatekeeper=mdfpp
 
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
@@ -179,7 +183,9 @@ ro.opengles.version=196610
 vendor.gralloc.disable_ubwc=0
 
 # Keystore
-ro.hardware.keystore_desede=true
+ro.hardware.keystore=mdfpp
+ro.security.keystore.keytype=sakv2,gak
+
 ro.vendor.qti.va_odm.support=1
 
 # Media
@@ -209,11 +215,17 @@ ro.vendor.extension_library=libqti-perfd-client.so
 # Qualcomm System Daemon
 persist.vendor.qcomsysd.enabled=1
 
-### RIL
-ro.telephony.default_network=9,9
+# RIL
 vendor.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
+ro.vendor.sec.radio.def_network=9
+persist.vendor.radio.enableadvancedscan=true
+ro.telephony.default_cdma_sub=0
+ro.vendor.use_data_netmgrd=false
+ro.radio.noril=no
+ro.vendor.epdg.support=true
+
 
 # Seamless transfer
 sys.fflag.override.settings_seamless_transfer=true
