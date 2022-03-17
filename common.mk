@@ -103,6 +103,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/sec_touchscreen.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/sec_touchscreen.kl
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
@@ -315,6 +319,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.samsung.hardware.biometrics.fingerprint@3.0-service.sm8250
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/etc/powerhint.json
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -451,8 +457,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/samsung/aidl/power-libperfmgr \
-    hardware/samsung/interfaces
+    hardware/samsung/aidl/power-libperfmgr
 
 # Touch
 PRODUCT_PACKAGES += \

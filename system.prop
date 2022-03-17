@@ -1,6 +1,8 @@
 # Camera
 camera.disable_zsl_mode=true
 
+ro.product_ship=true
+
 # Bluetooth
 persist.vendor.bt.a2dp.aac_whitelist=false
 persist.vendor.btstack.enable.lpa=true

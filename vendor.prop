@@ -143,7 +143,7 @@ vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
 
 # Chipset
-ro.soc.manufacturer=QTI
+ro.soc.manufacturer=qcom
 ro.soc.model=SM8250
 
 # DRM
