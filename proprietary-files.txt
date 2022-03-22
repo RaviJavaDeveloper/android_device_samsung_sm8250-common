@@ -1374,3 +1374,7 @@ vendor/lib64/libvideobeauty.uniplugin@1.0.so
 vendor/lib64/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib64/vendor.samsung.hardware.health@2.0.so
+
+
+vendor/lib/libsensorndkbridge.so
+vendor/lib64/libsensorndkbridge.so
