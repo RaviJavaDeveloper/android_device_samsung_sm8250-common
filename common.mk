@@ -355,6 +355,11 @@ PRODUCT_PACKAGES += \
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/sec_touchscreen.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/sec_touchscreen.kl
+	
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service.samsung \
+	libkeymaster4_1support.vendor:64
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -436,6 +441,10 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
+#Light
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.samsung
 
 # RIL
 PRODUCT_PACKAGES += \
